@@ -6,7 +6,7 @@ let web3: Web3 = new Web3('https://eth-mainnet.alchemyapi.io/v2/<api_key>');
 
   // Define the options for initializing NFTPlugin
   const nftPluginOptions = {
-    contractAddress: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", 
+    contractAddress: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", // BAYC
   };
 
   // Register NFTPlugin with initialization values
@@ -31,34 +31,20 @@ describe('getAllMetadataCombinations', () => {
     const input = [{'Earring': ["Gold", "Silver"]}, {'Grin': ["Crooked", "Toothy"]}]
     const expectedOutput = [
       [
-           {
-            "trait_type": "Background",
-            "value": "Hanuman"
-        },
-        {
-            "trait_type": "Body",
-            "value": "Real_monkey"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Poopy"
-        },
-        {
-            "trait_type": "Earrings",
-            "value": "Desiner"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Heavy_masterbate"
-        },
-        {
-            "trait_type": "Hair",
-            "value": "CowBoy"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Angery"
-        }
+        { trait_type: 'Earring', value: 'Gold' },
+        { trait_type: 'Grin', value: 'Crooked' }
+      ],
+      [
+        { trait_type: 'Earring', value: 'Gold' },
+        { trait_type: 'Grin', value: 'Toothy' }
+      ],
+      [
+        { trait_type: 'Earring', value: 'Silver' },
+        { trait_type: 'Grin', value: 'Crooked' }
+      ],
+      [
+        { trait_type: 'Earring', value: 'Silver' },
+        { trait_type: 'Grin', value: 'Toothy' }
       ]
     ]
     const result = web3Context.nftPlugin.getAllMetadataCombinations(input);
@@ -66,40 +52,17 @@ describe('getAllMetadataCombinations', () => {
   })});
   
   describe('getNFTMetadata', () => {
-    test('should return the metadata for NFT of id 20', async () => {
+    test('should return the metadata for NFT of id 38', async () => {
       const tokenId = "38"
       const expectedOutput = {
-        image: 'ipfs://QmetybKJAMJAsQsBt8Zpc2zwPiZjYARnv6z8SUzwukCMGV',
+        image: 'ipfs://QmZNurocAsqJA6B6MdchnpxxRqy6xAgigSuSTWvY9PmAaQ',
         attributes: [
-            {
-            "trait_type": "Background",
-            "value": "Grass"
-        },
-        {
-            "trait_type": "Body",
-            "value": "Cursed_yellow"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Army"
-        },
-        {
-            "trait_type": "Earrings",
-            "value": "Desiner"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "baddha"
-        },
-        {
-            "trait_type": "Hair",
-            "value": "CowBoy"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Ballaya"
-        }
-    ]
+          { trait_type: 'Earring', value: 'Cross' },
+          { trait_type: 'Clothes', value: 'Navy Striped Tee' },
+          { trait_type: 'Mouth', value: 'Bored Cigarette' },
+          { trait_type: 'Eyes', value: 'Closed' },
+          { trait_type: 'Fur', value: 'Black' },
+          { trait_type: 'Background', value: 'Blue' }
         ]
       }
       const result = await web3Context.nftPlugin.getNFTMetadata(tokenId);
@@ -128,34 +91,12 @@ describe('getAllMetadataCombinations', () => {
       const expectedOutput = [{
         image: 'ipfs://QmRRPWG96cmgTn2qSzjwr2qvfNEuhunv6FNeMFGa9bx6mQ',
         attributes: [
-            {
-            "trait_type": "Background",
-            "value": "Hanuman"
-        },
-        {
-            "trait_type": "Body",
-            "value": "Real_monkey"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Poopy"
-        },
-        {
-            "trait_type": "Earrings",
-            "value": "Desiner"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Heavy_masterbate"
-        },
-        {
-            "trait_type": "Hair",
-            "value": "CowBoy"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Angery"
-        }
+          { trait_type: 'Earring', value: 'Silver Hoop' },
+          { trait_type: 'Background', value: 'Orange' },
+          { trait_type: 'Fur', value: 'Robot' },
+          { trait_type: 'Clothes', value: 'Striped Tee' },
+          { trait_type: 'Mouth', value: 'Discomfort' },
+          { trait_type: 'Eyes', value: 'X Eyes' }
         ]
       },
       {
@@ -198,67 +139,22 @@ describe('getAllMetadataCombinations', () => {
       const expectedOutput = [{
         image: 'ipfs://QmRRPWG96cmgTn2qSzjwr2qvfNEuhunv6FNeMFGa9bx6mQ',
         attributes: [
-                {
-            "trait_type": "Background",
-            "value": "Hanuman"
-        },
-        {
-            "trait_type": "Body",
-            "value": "Real_monkey"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Poopy"
-        },
-        {
-            "trait_type": "Earrings",
-            "value": "Desiner"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Heavy_masterbate"
-        },
-        {
-            "trait_type": "Hair",
-            "value": "CowBoy"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Angery"
-        }
+          { trait_type: 'Earring', value: 'Silver Hoop' },
+          { trait_type: 'Background', value: 'Orange' },
+          { trait_type: 'Fur', value: 'Robot' },
+          { trait_type: 'Clothes', value: 'Striped Tee' },
+          { trait_type: 'Mouth', value: 'Discomfort' },
+          { trait_type: 'Eyes', value: 'X Eyes' }
         ]
       },
       {
         image: 'ipfs://QmcgoedsGRM4tzEZnSQX3RQ2SWTggATqUKQq1gfhhkzpfs',
         attributes: [
-              {
-            "trait_type": "Background",
-            "value": "Hanuman"
-        },
-        {
-            "trait_type": "Body",
-            "value": "Real_monkey"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Poopy"
-        },
-        {
-            "trait_type": "Earrings",
-            "value": "Desiner"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Heavy_masterbate"
-        },
-        {
-            "trait_type": "Hair",
-            "value": "CowBoy"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "Angery"
-        }
+          { trait_type: 'Clothes', value: 'Tuxedo Tee' },
+          { trait_type: 'Eyes', value: 'Holographic' },
+          { trait_type: 'Mouth', value: 'Bored Unshaven Cigarette' },
+          { trait_type: 'Background', value: 'Aquamarine' },
+          { trait_type: 'Fur', value: 'Gray' }
         ]
       }];
       expect(result).toEqual(expectedOutput);
