@@ -1,4 +1,4 @@
-# Web3.js NFT Master Plugin
+# Web3.js NFT Easy Plugin
 ![Node Version](https://img.shields.io/badge/node-20.x-green)
 [![NPM Package][npm-image]][npm-url]
 
