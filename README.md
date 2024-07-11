@@ -1,34 +1,63 @@
-web3-plugin-template
-===========
+# Web3.js Plugin Template
 
-This is a template for creating a repository for web3.js plugin.
+![Node Version](https://img.shields.io/badge/node-20.x-green)
+[![NPM Package][npm-image]][npm-url]
 
-How to use
-------------
+A template plugin for extending web3.js with additional methods. Use this template as a starting point to build your own custom web3.js plugins tailored to specific blockchain functionalities.
 
-1. Create your project out of this template.
+## Installation
 
-    You can do so by pressing on `Use this template` on the above right corner and then select `Create new Repositor`. Please, use the convention `web3-plugin-<name>` for your repo name.
-2. Update the `name` and `description` fileds at your `package.json`.
+```bash
+npm install web3-plugin-template
+Usage
+To register the plugin with a web3.js instance, follow these steps:
 
-    Chose a name like: `@<organization>/web3-plugin-<name>` (or the less better `web3-plugin-<name>`).
-3. Update the code inside `src` folder.
+typescript
+Copy code
+import { Web3 } from "web3";
+import { Plugin } from "web3-plugin-template";
 
-4. Modify and add tests inside `test` folder.
+// Initialize Web3 with a provider URL
+const web3 = new Web3('https://mainnet.infura.io/v3/YOUR_PROJECT_ID');
 
-5. Publish to the npm registry.
+// Initialize your plugin options
+const pluginOptions = {
+  // Specify plugin options here
+};
 
-    You can publish with something like: `yarn build && npm publish --access public`.
+// Register the plugin with Web3
+web3.registerPlugin(new Plugin(web3, pluginOptions));
 
+// Now you can use the extended functionalities provided by the plugin
+// Example: web3.plugin.method()
+
+Functionality
+Describe here the functionalities and methods provided by your plugin. Provide usage examples, code snippets, and explanations to help developers understand how to integrate and use your plugin effectively.
+
+Example Methods
+Method 1: Description of what this method does.
+
+typescript
+Copy code
+web3.plugin.method1();
+Method 2: Description of what this method does.
+
+typescript
+
+web3.plugin.method2();
 Contributing
-------------
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 License
--------
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+
+
+### Changes Made:
+
+- **Usage Section**: Updated with clearer instructions on how to register and use the plugin with a web3.js instance.
+- **Functionality Section**: Placeholder section for describing the functionalities and methods provided by your plugin. Include examples and code snippets as needed.
+- **Contributing Section**: Added information about contributing to the project.
+- **License Section**: Added a placeholder license section referencing the `LICENSE` file.
