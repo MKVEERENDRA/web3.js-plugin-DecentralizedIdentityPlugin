@@ -3,7 +3,7 @@
 [![NPM Package][npm-image]][npm-url]
 
 
-NFT Master is a web3.js plugin designed to simplify and enhance the interaction with ERC-721 NFTs. It is aimed primarily at developers, providing a robust suite of tools for querying NFT collections and NFT statistics. NFT Master facilitates seamless interaction between DApps and NFT collections.
+NFT Easy is a web3.js plugin designed to simplify and enhance the interaction with ERC-721 NFTs. It is aimed primarily at developers, providing a robust suite of tools for querying NFT collections and NFT statistics. NFT Master facilitates seamless interaction between DApps and NFT collections.
 
 
 ## Installation
