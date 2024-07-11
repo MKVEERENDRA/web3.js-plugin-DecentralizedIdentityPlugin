@@ -8,18 +8,18 @@ NFT Master is a web3.js plugin designed to simplify and enhance the interaction 
 
 ## Installation
 ```
-npm i @saileshp56/web3.js-plugin-nft-master
+npm i @MKVEERENDRA/web3.js-plugin-nft-master
 ```
 
 ## Registering the Plugin with a web3.js Instance
 For the web3 attribute, use any web3.js blockchain provider.\
-For contractAddress, use the contract address of the NFT collection. For example, the Bored Ape Yacht Club contractAddress is: 
+For contractAddress, use the contract address of the NFT collection. 
 ```
-0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+xooooooo
 ```
 For handleTokenURI, use a function that returns a GET request to the file storage of the NFT. Leave it empty to handle IPFS hashes. See metadataHandlers.ts for examples of this.
 ```typescript
-import { NFTPlugin } from "@saileshp56/web3.js-plugin-nft-master";
+import { NFTPlugin } from "@MKVEERENDRA/web3.js-plugin-DecentralizedIdentityPlugin)";
 import { Web3, core } from "web3";
 
 // Initialize Web3 with a provider URL
@@ -27,7 +27,7 @@ let web3: Web3 = new Web3('https://eth-mainnet.alchemyapi.io/v2/<your_api_key>')
 
 // Define the options for initializing NFTPlugin
 const nftPluginOptions = {
-  contractAddress: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", // BAYC Address
+  contractAddress: "XXXXXX00000", 
 };
 
 // Register NFTPlugin with initialization values
@@ -94,4 +94,4 @@ Enter your preferred blockchain provider in index.test.ts otherwise most tests w
 
 
 [npm-image]: https://img.shields.io/npm/v/web3-core-method.svg
-[npm-url]: https://www.npmjs.com/package/@saileshp56/web3.js-plugin-nft-master
+[npm-url]: https://www.npmjs.com/package/@Mkveerendra/DecentralizedIdentityPlugin
